@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo List</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+</head>
+<body class="bg-secondary" onload="doLoadEntries()">
+    <div class="container">
+        <div class="row">
+            <div class="col-4 col-md-4 col-sm-4"></div>
+                <div class="col-4 col-md-4 col-sm-4">
+                    <div class="card text-white bg-dark mb-3 mx-auto">
+                        <div class="card-header">Simple <div class="float-right d-flex"><a class="text-primary">Help</a></div></div>
+                        <div class="card-body">
+                        <h5 class="card-title">Todo list</h5>
+                        <form>
+                            <div class="form-group">
+                                <label for="entryName" style="display: none;"></label><input type="text" class="form-control" id="entryName" placeholder="Name of the task" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="entryDate" style="display: none;"></label><input type="date" class="form-control" id="entryDate" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="entryCategory" style="display: none;"></label><select class="custom-select" id="entryCategory">
+                                    <option selected>Choose a category</option>
+                                    <option value="School">School</option>
+                                    <option value="Work">Work</option>
+                                    <option value="Shopping">Shopping</option>
+                                    <option value="Other">Other</option>
+                                </select>
+                            </div>
+                            <div class="form-group d-flex float-left">
+                                <button type="button" class="btn btn-primary" id="addEntry">Submit</button>
+                            </div>
+                        </form>
+                    </div>
+                        <br/>
+                        <div class="row d-flex">
+                            <div class="col d-flex justify-content-center">
+                                <div class="spinner-border text-primary d-none" role="status" id="loader">
+                                    <span class="sr-only">Loading...</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Your entries:</h5>
+                            <p class="card-text" id="entriesContainer">
+                                <!-- The entries go here! -->
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            <div class="col-4 col-md-4 col-sm-4"></div>
+        </div>
+
+        <nav class="navbar fixed-bottom navbar-expand-sm navbar-dark bg-dark">
+            <a class="navbar-brand" href="#">Made with Bootstrap and Is.js</a>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+            </div>
+        </nav>
+
+
+    </div>
+    <script src="js/scripts.js"></script>
+    <script src="node_modules/is_js/is.js"></script>
+    <script src="js/bootstrap.bundle.js"></script>
+</body>
+<template id="entryTemplate">
+    <div class="card bg-secondary mb-3">
+        <div class="card-header">
+            <div class="row">
+                <div class="col">
+                    <h5>School</h5>
+                </div>
+                <div class="col text-right">
+                    21/12/2019
+                </div>
+            </div>
+        </div>
+        <div class="card-body">
+            <div class="row">
+                <div class="col card-title">
+                    School
+                </div>
+                <div class="col text-right">
+                    <form>
+                        <div class="col-auto my-1">
+                            <div class="custom-control custom-checkbox mr-sm-2">
+                                <input type="checkbox" class="custom-control-input" id="replaceMe">
+                                <label class="custom-control-label" for="replaceMe"></label>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>
+</html>

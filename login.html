@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+</head>
+<body class="bg-secondary">
+<div class="container">
+    <div class="row">
+        <div class="col-4 col-md-4 col-sm-4"></div>
+        <div class="col-4 col-md-4 col-sm-4">
+            <div class="card text-white bg-dark mb-3 mx-auto">
+                <div class="card-header">Simple <div class="float-right d-flex"><a class="text-primary">Help</a></div></div>
+                <div class="card-body">
+                    <h5 class="card-title">Todo list</h5>
+                    <form onsubmit="doLogin(event)">
+                        <div class="form-group">
+                            <label for="entryName" style="display: none;"></label>
+                            <input type="text" class="form-control" id="entryName" placeholder="Enter your user name" value="user1" required>
+                        </div>
+<!--                        <div class="form-group">-->
+<!--                            <label for="entryEmail" style="display: none;"></label>-->
+<!--                            <input type="email" class="form-control" id="entryEmail" placeholder="youremail@gmail.com" required>-->
+<!--                        </div>-->
+                        <div class="form-group">
+                            <label for="entryPassword" style="display: none;"></label>
+                            <input type="password" class="form-control" id="entryPassword" placeholder="Enter your password" value="password123" required>
+                        </div>
+                        <div class="form-group d-flex float-left">
+                            <button type="submit" class="btn btn-primary">Log in</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="col-4 col-md-4 col-sm-4"></div>
+    </div>
+</div>
+<script src="js/scripts.js"></script>
+<script src="js/bootstrap.bundle.js"></script>
+<script src="node_modules/is_js/is.js"></script>
+</body>
+</html>
